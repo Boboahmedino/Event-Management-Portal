@@ -1,0 +1,61 @@
+{% load static %}
+{% block content %}
+
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+                
+    
+            <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="ti-palette menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">
+                        <i class="ti-user menu-icon"></i>
+                        <span class="menu-title">Profile</span>
+                    </a>
+                </li>
+
+                
+                <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class="ti-agenda menu-icon"></i>
+                    <span class="menu-title">Reservations</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="{% url 'make_reservation' %}">
+                            Make Reservations</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="{% url 'history' %}">
+                                Reservation History</a>
+                        </li>
+                    </ul>
+                </div>
+           
+                                
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'change_password' %}">
+                        <i class="ti-key menu-icon"></i>
+                        <span class="menu-title"> Change Password</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">
+                        <i class="ti-power-off menu-icon"></i>
+                        <span class="menu-title"> Signout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+{% endblock %}

@@ -1,0 +1,128 @@
+.paragraph__column form.contact-form input:not([type='submit']) {
+    width: auto;
+}
+
+form.contact-form .form-type-checkbox,
+form.contact-form .form-type-radio {
+    width: auto;
+    float: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    margin: 11px 0 0 0;
+    display: inline-block;
+}
+
+form.contact-form input[type="checkbox"]+label,
+form.contact-form input[type="radio"]+label {
+    padding: 0 10px 0 5px;
+    float: left;
+}
+
+#footer-social a,
+#footer-quickLinks a,
+#menu-panes a {
+    text-decoration: none;
+}
+
+#footer-social a:hover,
+#footer-quickLinks a:hover,
+#menu-panes a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:990px) {
+    .hero-caption .row .hero-button {
+        margin: 0 0 10px 0;
+    }
+}
+
+.zoom-images>.container>.row>div {
+    margin: 15px;
+}
+
+adEvent_Cont:nth-child(4) {
+    display: none;
+}
+
+.article.views-row {
+    -ms-flex: 0 0 auto;
+}
+
+.middle h2.frutiger {
+    color: #00694e;
+}
+
+.quick-links a {
+    text-decoration: none;
+    width: 33%;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+.tracking-links p {
+    text-align: left;
+}
+
+.zoom-images a,
+.spotlight.image-grid .spot-content p>a {
+    text-transform: uppercase;
+}
+
+.zoom-images a:hover,
+.spotlight.image-grid .spot-content p>a:hover {
+    text-decoration: underline;
+}
+
+.zoom-images a:after,
+.spotlight.image-grid .spot-content p>a:after {
+    content: "\f105 ";
+    font-family: FontAwesome;
+    font-size: 17px;
+    padding-left: 6px;
+    display: inline-block;
+    overflow: hidden;
+    height: 18px;
+    top: -3px;
+    position: relative;
+}
+
+.slide__caption a.button:only-child,
+a.button.white {
+    background-color: transparent;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+    top: 50% !important;
+}
+
+.large-video-text {
+    padding: 0px !important;
+}
+
+.holder-right {
+    margin-top: 0 !important;
+}
+
+@media screen and (max-width:668px) {
+    .top-navigation .col-10 {
+        display: none;
+    }
+
+    .top-navigation .justify-content-end {
+        -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+        justify-content: flex-start !important;
+    }
+
+    #header-bottom.sticky #top-navigation {
+        float: right;
+    }
+}

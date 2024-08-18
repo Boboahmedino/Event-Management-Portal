@@ -1,0 +1,12 @@
+{% load static %}
+<!--This allows to display the messages warning, info etc in my views and also attach color based on the bootstrap class i loctaed in the file-->
+            {% if messages %}
+            <div class = 'messages'>
+                {% for message in messages %}
+                <div {% if message.tags %} class = "alert alert-sm alert-{{ message.tags }}" {% endif %}>        
+                    {{message}}
+                </div>
+                {%endfor%}
+            </div>
+            {% endif %}
+            

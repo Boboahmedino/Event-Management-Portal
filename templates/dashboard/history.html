@@ -1,0 +1,116 @@
+{% extends 'base_dash.html' %}
+{% load static %}
+{% block content %}
+
+               
+<style> 
+.edit{
+    color: #000;
+    background-color: #45fd64;
+    border-color: #45fd64;
+}
+
+.edit:hover{
+    color: #000;
+    background-color:  #0d8421;
+    border-color:  #0d8421;
+}
+.delete {
+    color: #000;
+    background-color: rgb(245, 65, 65);
+    border-color: rgb(245, 65, 65);
+}
+
+.delete:hover {
+    color: #000;
+    background-color: rgb(147, 15, 15);
+    border-color: rgb(147, 15, 15);
+}
+</style>
+
+
+
+<div class="container-fluid page-body-wrapper">
+{% include 'dashboard/sidebar.html' %}
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 grid-margin">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                               <h4 class="card card-body card-title">Lagos State University Event Services </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="row">
+                        <div class="col-12 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Reservation History</h4>
+                                    <p class = "card-description"> <code>This is the list of your Reservations at Lagos State Univerisity Event Services</code></p>
+                                <div class="row">
+                    <div class="col-md-12 grid-margin stretch-card">
+                        <div class="card position-relative">
+
+                        
+                                <div class="card-body">
+                                    {% comment %} <p class="card-title mb-0">Candidate Reports</p> {% endcomment %}
+                                    <div class="table-responsive">
+                                        <table class="table table">
+                                        {% comment %} <table class="table table-hover"> {% endcomment %}
+                                            <thead>
+                                                <tr>
+                                                    <th>Event Title</th>
+                                                    <th>Event Category</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Total Number of Guest</th>
+                                                    <th>Time Frame of Event</th>
+                                                    <th>Venue Setup</th>
+                                                    <th>Breakout Rooms</th>
+                                                    <th>Catering Service</th>
+                                                    <th>Venue of Choice</th>
+                                                    <th>Confirmation</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for reservation in reservations reversed%}
+                                                <tr>
+                                                    <td>{{reservation.event_title}}</td>
+                                                    <td>{{reservation.category}}</td>
+                                                    <td>{{reservation.start_date}}</td>
+                                                    <td>{{reservation.end_date}}</td>
+                                                    <td>{{reservation.guest}}</td>
+                                                    <td>{{reservation.time}}</td>
+                                                    <td>{{reservation.room}}</td>
+                                                    <td>{{reservation.breakout}}</td>
+                                                    <td>{{reservation.catering}}</td>
+                                                    <td>{{reservation.venue}}</td>
+                                                    <td>{{reservation.confirmation}}</td>
+                                                    {% comment %} <td>
+                                                    <a href="" class="edit btn btn-primary "><i class="ti-pencil-alt"></i></a>
+                                                    <a href = "" class = "delete btn btn-primary"><i class="ti-trash"></i></a>
+                                                    </td> {% endcomment %}
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+        </div>
+    </div>
+
+{% endblock %}

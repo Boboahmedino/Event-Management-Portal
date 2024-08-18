@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+                <div class="container">
+                    <a id="main-content" tabindex="-1"></a>
+                    <div class="layout-content">
+                        <div class="region--content">
+                            <div data-drupal-messages-fallback class="hidden"></div>
+                            <div class="block">
+                                <div class="t-content-page">
+                                    <div class="m-page-introduction d-flex align-items-center standard">
+                                        Please select your payment option to complete your booking at Lagos State University Event Services.
+                                    </div>
+                                    <div class="a-field-content">
+                                        <div class="c-floor c-floor-form c-floor--horizontal-narrow c-floor--vertical-regular">
+                                            <div class="c-floor--container  ">
+                                                <div class="c-floor--content">
+                                                    <div class="field field--name-form field--type-webform field__item">
+
+                                                                {% comment %} <nav aria-label="breadcrumb">
+                                                                    <ol class="breadcrumb">
+                                                                        <li class="breadcrumb-item"> <a href="">Contact Information</a> </li>
+                                                                        <li class="breadcrumb-item active" aria-current="page">Event Information</li>
+                                                                    </ol>
+                                                                </nav> {% endcomment %}
+
+                                                        <form action= "{% url 'pay' %}" method="post">
+                                                                  {% include 'partials/_messages.html' %}
+                                                                         {% csrf_token %}
+                                                                
+                                                                     <div class="form-group">
+                                                                        {% comment %} <label for=""><b>Select Payment Option</b></label> {% endcomment %}
+                                                                        <select class = "form-control" name = "name">
+                                                                            {% comment %} <option value="default"></option> {% endcomment %}
+                                                                            {% for pay in pays %}
+                                                                            <option name = "pay" value = "{{pay.name}}"> {{pay.name}}</option>
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                    </div>                                                                                        
+                                                                    <br>
+                                                                    <input type="submit" value="Make Payment" class="btn btn-primary btn-primary-sm" />
+
+                                                        </form>
+                                                                </div>          
+                                                                    </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+{%endblock%}

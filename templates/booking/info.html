@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+                <div class="container">
+                    <a id="main-content" tabindex="-1"></a>
+                    <div class="layout-content">
+                        <div class="region--content">
+                            <div data-drupal-messages-fallback class="hidden"></div>
+                            <div class="block">
+                                <div class="t-content-page">
+                                    <div class="m-page-introduction d-flex align-items-center standard">
+                                     Booking Information 
+                                    </div>
+                                    <div class="a-field-content">
+                                        <div class="c-floor c-floor-form c-floor--horizontal-narrow c-floor--vertical-regular">
+                                            <div class="c-floor--container  ">
+                                                <div class="c-floor--content">
+                                                    <div class="field field--name-form field--type-webform field__item">
+
+                                                                {% comment %} <nav aria-label="breadcrumb">
+                                                                    <ol class="breadcrumb">
+                                                                        <li class="breadcrumb-item"> <a href="">Contact Information</a> </li>
+                                                                        <li class="breadcrumb-item active" aria-current="page">Event Information</li>
+                                                                    </ol>
+                                                                </nav> {% endcomment %}
+
+                                                        <form action= "{% url 'home' %}" method="get">
+                                                                  {% include 'partials/_messages.html' %}
+                                                                         {% csrf_token %}
+                                                                
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Full Name:</b></label> <label for=""><p>{{values.last_name}} {{values.first_name}}</p></label>
+                                                                        <input type="text" class="form-control form-control-sm" name="first_name" value="{{values.first_name}}" readonly  />
+                                                                    </div>
+                                                                <hr>
+                                                                    {% comment %} <br> {% endcomment %}
+                                                                    {% comment %} <div class="form-group">
+                                                                        <label for=""><b>Last Name</b></label>
+                                                                        <input type="text" class="form-control form-control-sm" name="last_name" value="{{values.last_name}}" readonly />
+                                                                    </div> {% endcomment %}
+
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Email:</b></label> <label for=""><p>{{values.email}}</p></label>
+                                                                        {% comment %} <input type="email" class="form-control form-control-sm" name="email" value="{{values.email}}" readonly  /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+                                                                
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Mobile Number:</b></label> <label for=""><p>{{values.mobile_number}}</p></label>
+                                                                        {% comment %} <input type="tel" class="form-control form-control-sm" name="mobile_number" value="{{values.mobile_number}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                
+                                                                    <hr>
+                                                                
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Contact Address:</b></label> <label for=""><p>{{values.contact_address}}</p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="contact_address" value="{{values.contact_address}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Event Title:</b></label> <label for=""><p>{{values.event_title}}</p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="event_title" value="{{values.event_title}}" readonly  /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+                                                                    
+                                                                     <div class="form-group">
+                                                                        <label for=""><b>Event Category:</b></label> <label for=""><p> {{values.category}} </p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="category" value="{{values.category}}" readonly  /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+                                                            
+                                                                    {% comment %} <div class="form-group">
+                                                                        <label for=""><b>Event Category</b></label>
+                                                                        <select diabled class = "form-control" name = "category">
+                                                                            {% for category in categories %}
+                                                                            <option name = "category" value = "{{category.name}}"> {{values.category}} </option>
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                    </div>                                    {% endcomment %}
+                                                                
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Event Start Date:</b></label> <label for=""><p> {{values.start_date}} </p></label>
+                                                                        {% comment %} <input type="date" class="form-control form-control-sm" name="start_date" value="{{values.start_date}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Event End Date:</b></label> <label for=""><p> {{values.end_date}} </b></label>
+                                                                        {% comment %} <input type="date" class="form-control form-control-sm" name="end_date" value="{{values.end_date}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Total Number of Guest:</b></label> <label for=""><p> {{values.guest}} </p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="guest" value="{{values.guest}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Time Frame of Event:</b></label> <label for=""><p> {{values.time}} </p></label>
+                                                                        {% comment %} <input type="time" class="form-control form-control-sm" name="time" value="{{values.time}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                    <hr>
+
+                                                                    
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Venue / Room Setup:</b></label> <label for=""><p> {{values.room}} </p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="room" value="{{values.room}}" readonly /> {% endcomment %}
+                                                                    </div>
+                                                                    
+                                                                    {% comment %}                                                                     
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Venue / Room Setup</b></label>
+                                                                         <select class = "form-control" name = "room">
+                                                                            {% for room in rooms %}
+                                                                            <option name = "room" value = "{{room.name}}"> {{room.name}}</option>
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                       </div> {% endcomment %}
+                                                                    <hr>
+
+                                                                  <div class="form-group">
+                                                                        <label for=""><b>Breakout Room Request:</b></label> <label for=""><p> {{values.breakout}} </p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="breakout" value="{{values.breakout}}" readonly /> {% endcomment %}
+                                                                    </div>
+
+                                                                    {% comment %} 
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Are breakout rooms Required?</b></label>
+                                                                         <select class = "form-control" name = "breakout">
+                                                                            {% for breakout in breakouts %}
+                                                                            <option name = "breakout" value = "{{breakout.name}}"> {{breakout.name}}</option>
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                       </div> {% endcomment %}
+                                                                    <hr>
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Catering Service Request:</b></label> <label for=""><p> {{values.catering}} </p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="catering" value="{{values.catering}}" readonly /> {% endcomment %}
+                                                                    </div>
+
+                                                                    {% comment %} <div class="form-group">
+                                                                        <label for=""><b>Is Catering Service Required?</b></label>
+                                                                         <select class = "form-control" name = "catering">
+                                                                        {% for catering in caterings %}
+                                                                            <option name = "catering" value = "{{catering.name}}"> {{catering.name}}</option>
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                       </div> {% endcomment %}
+                                                                    <hr>
+
+                                                                    <div class="form-group">
+                                                                        <label for=""><b>Venue of Choice:</b></label> <label for=""><p> {{values.venue}} </p></label>
+                                                                        {% comment %} <input type="text" class="form-control form-control-sm" name="venue" value="{{values.venue}}" readonly /> {% endcomment %}
+                                                                    </div>
+
+                                                                    {% comment %} <div class="form-group">
+                                                                        <label for=""><b>Do you have Preferred Venue?</b></label>
+                                                                         <select class = "form-control" name = "venue">
+                                                                            {% for venue in venues %}
+                                                                            <option name = "venue" value = "{{venue.name}}"> {{venue.name}}</option>127
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                       </div> {% endcomment %}
+
+                                                                    <hr>
+                                                                    <input type="submit" value="LASU Event Services" class="btn btn-primary btn-primary-sm" />
+
+                                                        </form>
+                                                                </div>          
+                                                                    </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+{%endblock%}

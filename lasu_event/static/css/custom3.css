@@ -1,0 +1,22 @@
+span{
+     color: black;
+     font-size: 50px;
+     font-weight: bold;
+     font-family:'Times New Roman';
+ }
+ 
+ .hoo {
+    text-decoration: none;
+     background: #FF4A52;
+     color: #fff !important;
+     border: 1px solid #FF4A52;
+     border-width: 20px;
+     border-radius: 5px;
+ }
+
+ .hoo:hover {
+     background: #1EC6B6;
+     border-color: #1EC6B6;
+     color: #fff;
+ }
+

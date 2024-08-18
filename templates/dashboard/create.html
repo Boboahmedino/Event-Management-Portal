@@ -1,0 +1,156 @@
+{% extends 'base_dash.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid page-body-wrapper">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+                
+    
+            <li class="nav-item">
+                   
+                </li>
+
+
+                <li class="nav-item">
+                   
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> 
+                          
+                        </li>
+
+                        <li class="nav-item">
+                               
+                        </li>
+                    </ul>
+                </div>
+           
+                                
+                <li class="nav-item">
+                    
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">
+                        <i class="ti-power-off menu-icon"></i>
+                        <span class="menu-title"> Signout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-panel">
+            <div class="content-wrapper">
+                       <div class="row">
+                        
+                        <div class="col-12 grid-margin">
+
+                            <div class="card">
+                                <br>
+<br>
+                                        {% include 'partials/_messages.html' %}
+
+                                <div class="card-body">
+                                 
+                            <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card border-bottom-0">
+                                <div class="card-body pb-0">
+                                    <center><img src="{%static "twitter/logo3.jpg" %}" width = '100' /></center>
+                                                <br>
+                                    <center><h3 class="text-muted font-weight-light">Welcome to the Lagos State Univeristy Event Services</h3></center>
+                                    <center> <p class="card-title">We Provide The Best Event Services In Your Budget</p></center>
+                                   
+                                   <center>
+                                    <h4 class="text-muted font-weight-light">
+                                        Event Services in Lagos State University oversees the operations of different
+                                        major events,including outdoor events on campus. </h4></center>
+                                        <center>
+                                        
+                                </center>                           
+                                </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Customer Detail</h4>
+                                    <p class = "card-description"> <code>Please provide your Information </code></p>
+                                    <form action = "{% url 'profile_info' %}" method = "POST" class="form-sample">
+                                        {% comment %} {% include 'partials/_messages.html' %} {% endcomment %}
+                                            {% csrf_token %}    
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Mobile Number</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name = 'mobile_number' value="{{values.mobile_number }}" class="form-control"  placeholder = "Enter Mobile Number"  required/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                           
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Address</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name = 'address' value="{{values.address}}" class="form-control"  placeholder = "Enter Address" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                   
+                                                    <label class="col-sm-3 col-form-label">Country</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name = 'country'  value="{{values.country}}" class="form-control"  placeholder = "Enter Country of Residence" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                             <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">State</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name = 'state' value="{{values.state}}" class="form-control"  placeholder = "Enter State of Origin" required/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                 
+
+                                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+
+                                    </form>
+                                </div>
+                          
+
+
+                    </div>
+
+                                {% comment %} <canvas id="order-chart" class="w-100"></canvas> {% endcomment %}
+                            </div>
+                        </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,299 @@
+section#alert {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+}
+
+.ohioAlertContainer {
+    background-color: #00694e;
+}
+
+.ohioAlertContainer .field--name-field-image {
+    position: relative;
+}
+
+.ohioAlertContainer .field--name-field-image img {
+    height: auto;
+    width: 100%;
+    max-width: 291px;
+    display: block;
+}
+
+.ohioAlertContainer h2 {
+    background-color: #2B7051;
+    border-top: 1px solid #53AF44;
+    border-bottom: 1px solid #53AF44;
+    color: #FFF;
+    font-size: 21px;
+    text-transform: none;
+    padding: 5px;
+}
+
+.ohioAlertContainer .field--name-body {
+    font-size: 14px;
+    color: #FFF;
+}
+
+.ohioAlertContainer .field--name-body a {
+    text-decoration: underline;
+}
+
+.ohioAlertContainer .field--name-body *,
+.ohioAlertContainer .field--name-body a {
+    color: #FFF;
+    font-size: 14px;
+}
+
+#emerAffectedCampus {
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+}
+
+@media screen and (max-width:665px) {
+    .ohioAlertContainer .field--name-field-image {
+        display: none;
+    }
+
+    .ohioAlertContainer h2 {
+        background-color: #53af44;
+        border-color: #cce7c7;
+        text-align: center;
+    }
+
+    .ohioAlertContainer .field--name-body {
+        text-align: center;
+    }
+
+    .ohioAlertContainer .field--name-field-image {
+        text-align: center;
+    }
+}
+
+.block-funnelback-search-block {
+    top: 0;
+    background: #00694E;
+    z-index: 999;
+    margin-top: -100%;
+    position: absolute;
+    padding: 12px 0px;
+    width: 100%;
+    display: none;
+    -webkit-transition: margin .5s;
+    -moz-transition: margin .5s;
+    -ms-transition: margin .5s;
+    -o-transition: margin .5s;
+    transition: margin .5s;
+}
+
+body.no-js .block-funnelback-search-block {
+    position: relative;
+    margin-top: 0;
+}
+
+.block-funnelback-search-block.active {
+    margin-top: 0px;
+    display: block !important;
+}
+
+.block-funnelback-search-block .searchBoxContainer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.block-funnelback-search-block .form-item-search {
+    width: 85%;
+    font-size: 30px;
+    color: #998c80;
+    display: inline-block;
+    max-width: calc(85% - 44px);
+    height: 40px;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.block-funnelback-search-block .form-item-search input {
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+.block-funnelback-search-block input.form-submit {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    background: #004230;
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    vertical-align: top;
+    margin: 8px 0 0;
+}
+
+.block-funnelback-search-block .form-submit:hover,
+.block-funnelback-search-block .form-submit:focus {
+    background: #00553e;
+}
+
+.block-funnelback-search-block .form-search {
+    box-sizing: inherit;
+}
+
+#closeSearch {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    z-index: 8;
+}
+
+#closeSearch span {
+    display: block;
+    left: -1px;
+    position: relative;
+    color: #fff;
+    font-size: 1px;
+    line-height: 1px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#closeSearch:before,
+#closeSearch:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25px;
+    color: #000;
+    position: absolute;
+    background: #000;
+    top: 24px;
+    left: 12px;
+    transform: rotate(0);
+    transition: all .7s ease-in;
+}
+
+.block-funnelback-search-block.active #closeSearch:before {
+    transform: rotate(45deg);
+}
+
+.block-funnelback-search-block.active #closeSearch:after {
+    transform: rotate(-45deg);
+}
+
+fieldset#edit-site-selector--wrapper {
+    text-align: center;
+    background: #00694E;
+    border: none;
+    padding: 15px 0px 0px 0px;
+    margin: 0;
+}
+
+fieldset#edit-site-selector--wrapper * {
+    color: #FFF;
+}
+
+#edit-site-selector .form-item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+@media screen and (max-width:767px) {
+    fieldset#edit-site-selector--wrapper {
+        margin-left: 110px;
+    }
+
+    #edit-site-selector .form-item:first-of-type label {
+        border-radius: 5px 0 0 5px;
+    }
+
+    #edit-site-selector .form-item:last-of-type label {
+        border-radius: 0 5px 5px 0;
+    }
+
+    #edit-site-selector .form-item {
+        margin: 0;
+        position: relative;
+        vertical-align: top;
+        top: -4px;
+        float: left;
+        transition: all 0.05s ease-in;
+    }
+
+    #edit-site-selector label {
+        color: #000 !important;
+        background: #f9f9f9;
+        text-shadow: 0 1px 0 #f3f3f3;
+        width: 80px;
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #bbb;
+        cursor: pointer;
+        transition: all 0.05s ease-in;
+    }
+
+    #edit-site-selector label:hover {
+        color: #FFF !important;
+        background: #00553e;
+    }
+
+    #edit-site-selector input:checked+label {
+        color: #FFF !important;
+        background: #00553e;
+    }
+
+    #edit-site-selector input {
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:512px) {
+    .block-funnelback-search-block.active input.form-submit {
+        display: block;
+        width: 100%;
+    }
+
+    .block-funnelback-search-block .searchBoxContainer {
+        height: auto;
+    }
+
+    .block-funnelback-search-block fieldset#edit-site-selector--wrapper {
+        margin-left: 0;
+    }
+}
+
+.social-media-links--platforms {
+    padding-left: 0;
+}
+
+.social-media-links--platforms.horizontal li {
+    display: inline-block;
+    text-align: center;
+    padding: .2em .35em;
+}
+
+.social-media-links--platforms.vertical li {
+    list-style-type: none;
+    margin: 0 0 .5em 0;
+}
+
+.social-media-links--platforms.vertical li a img {
+    vertical-align: middle;
+    margin-right: .5em;
+}
+
+.iconsets-wrapper {
+    display: inherit;
+    overflow-x: auto;
+}

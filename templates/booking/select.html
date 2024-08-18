@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+              <div class="container">
+                    <a id="main-content" tabindex="-1"></a>
+                    <div class="layout-content">
+                        <div class="region--content">
+                            <div data-drupal-messages-fallback class="hidden"></div>
+                            <div class="block">
+                                <div class="t-content-page">
+                                          {% include 'partials/_messages.html' %}
+                                        
+                                    <div class="m-page-introduction d-flex align-items-center standard">
+                                        Request for space at Lagos State University Event Services.
+                                    </div>
+                                
+                                    <div class="a-field-content">
+                                        <div class="c-floor c-floor-form c-floor--horizontal-narrow c-floor--vertical-regular">
+                                            <div class="c-floor--container  ">
+                                                <div class="c-floor--content">
+                                                    <div class="field field--name-form field--type-webform field__item">
+
+                                                        <form>
+                                                                <center>
+                                                                    <div>
+                                                                           <a href="{%url 'contact'%}" class="btn btn-primary d-inline-flex flex-row align-items-center">
+                                                                                Make Booking
+                                                                            </a>
+                                                                            
+                                                                            <a href="{% url 'pay' %}" class="btn btn-primary btn-primary-sm">
+                                                                               Make Payment
+                                                                            </a>
+                                                                            {% comment %} <form action="{% url 'logout' %}"  method = 'post'>
+                                                                                {%csrf_token%}
+                                                                            <input class= "btn btn-primary" type="submit"  value="Sign Out"> 
+                                                                            </form> {% endcomment %}
+                                                                    </div>
+                                                            </center>
+                                                    </div>
+
+                                                                </div>          
+                                                                    </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+
+{% endblock %}

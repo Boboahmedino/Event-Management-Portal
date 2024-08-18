@@ -1,0 +1,157 @@
+{% extends 'base_dash.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid page-body-wrapper">
+{% include 'dashboard/sidebar.html' %}
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 grid-margin">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                               <h4 class="card card-body card-title">Lagos State University Event Services </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="row">
+                        <div class="col-12 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Customer Request</h4>
+                                    <p class = "card-description"> <code>Please fill out the Form to make Reservation at Lagos State Univerisity </code></p>
+                                    <form action = "" method = "POST" class="form-sample">
+                                        {% include 'partials/_messages.html' %}
+                                            {% csrf_token %}    
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Event Title</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name = 'event_title' value="{{values.event_title }}" class="form-control"  placeholder = "Enter Title/Name" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Event Category</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control form-control-sm" name = "category" >
+                                                            {% for category in categories  %}
+                                                            <option name = "category" value= "{{category.name}}">{{category.name}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Start Date</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="date" name = 'start_date' value="{{values.start_date}}" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                   
+                                                    <label class="col-sm-3 col-form-label">End Date</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="date" name = 'end_date'  value="{{values.end_date}}" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                             <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Total Guest</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name = 'guest' value="{{values.guest}}" class="form-control"  placeholder = "Enter Total Number of Guest" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                             <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Time Frame</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="time" name = 'time'  value="{{values.time}}" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Venue Setup</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control form-control-sm" name = "room" >
+                                                            {% for room in rooms  %}
+                                                            <option name = "room" value= "{{room.name}}">{{room.name}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Breakout Rooms</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control form-control-sm" name = "breakout" >
+                                                            {% for breakout in breakouts  %}
+                                                            <option name = "breakout" value= "{{breakout.name}}">{{breakout.name}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Catering Service</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control form-control-sm" name = "catering" >
+                                                            {% for catering in caterings  %}
+                                                            <option name = "catering" value= "{{catering.name}}">{{catering.name}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Venue of Choice</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control form-control-sm" name = "venue" >
+                                                            {% for venue in venues  %}
+                                                            <option name = "venue" value= "{{venue.name}}">{{venue.name}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                       <button type="submit" class="btn btn-primary me-2">Submit</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+        </div>
+    </div>
+
+{% endblock %}

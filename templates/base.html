@@ -1,0 +1,59 @@
+
+{%load static%}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>LASU Event Services
+            {% block title %}
+            
+            {% endblock  %}
+        </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{%static "twitter/logo3.jpg" %}">
+
+    <link href="{%static "css/bootstrap.min2.css" %}" rel="stylesheet">
+
+  </head>
+  <body class="page-node-type-content-page">
+          <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div class="layout-container page--internal">
+
+
+
+
+            <a id="page-content" tabindex="-1"></a>
+
+            <div class="region--page_header">
+
+           
+
+                <div class="block">
+
+
+                    <div class="c-hero-banner c-hero-banner--height-medium c-hero-banner--preserve-middle">
+
+                    </div>
+
+                </div>
+
+            </div>
+                      <main>
+
+
+    
+      
+          {% block content %}
+          
+          
+          {% endblock %}
+
+          
+        </div>
+    </div>
+
+
+ </body>
+</html>
+

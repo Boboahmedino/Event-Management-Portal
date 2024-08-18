@@ -1,0 +1,71 @@
+{% extends 'base_auth.html' %}
+<!--This loads the linked file sources in base_auth.html to have effect on this page here..... -->
+{% load static %}
+<!--this loads the files in my my-django-app project to have effect on this page-->
+{% block content %}
+<!--contents of whatever is design based on my undertanding is put in the block-->
+
+
+<div class="center">
+        <h1>Sign Up</h1>
+        <form action = 'register' method = 'post'>
+   
+                {% csrf_token %}
+                {% include 'partials/_messages.html' %}
+
+            <!--This allows to display the messages in my views and also attach color based on the bootstrap i loctaed in the file-->
+           <div class="txt_field">
+                <input 
+                type="text"
+                name = 'username'
+                id = 'usernamefield'
+                required>
+                <span></span>
+                <label>Full Name (Lastname, Firstname, Middlename)</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="email" 
+                  name = 'email'
+                id = 'emailfield'
+                required>
+                <span></span>
+                <label>Email</label>          
+            </div>  
+
+
+            <div class="txt_field">
+                <input type="password"
+                  name = 'password'
+                id = 'passwordfield'
+                 required>
+                <span></span>
+                <label>Password</label>
+            </div>
+
+
+            <div class="txt_field">
+                <input type="password"
+                  name = 'confirm_password'
+                id = 'passwordfield'
+                 required>
+                <span></span>
+                <label>Confirm Password</label>
+            </div>
+
+
+            <!-- <div class="pass">Forgot Password?</div> -->
+            <input type="submit" value="Sign Up">
+            <div class="sign_link">Already have an account?
+                <a href="{% url 'login' %}">Sign In</a>
+            </div>
+        </form>
+    </div> 
+
+    {% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,229 @@
+{% extends 'base_dash.html' %}
+{% load static %}
+{% block content %}
+
+<style> 
+.edit{
+    color: green;
+    background-color: white;
+    text-decoration: none;
+    
+    {% comment %} color: #000; {% endcomment %}
+    {% comment %} background-color: #45fd64; {% endcomment %}
+    {% comment %} border-color: #45fd64; {% endcomment %}
+}
+
+.edit:hover{
+    color: #000;
+    background-color:  none;
+    {% comment %} border-color:  #0d8421; {% endcomment %}
+
+.button{
+    padding: 12px 28px;
+    border:none
+    background-color: blue;
+}
+}
+</style>
+
+<div class="container-fluid page-body-wrapper">
+{% include 'dashboard/sidebar.html' %}
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 grid-margin">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                               <h4 class="card card-body card-title">Lagos State University Event Services </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            
+              <div class="row">
+                        <div class="col-12 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Customer Detail</h4>
+                                    <p class = "card-description"style = "text-align: right; font-size: small;"> 
+                                        {% comment %} <code>Please Provide your Information <strong><i class="ti-arrow-right"></i></strong> </code>  {% endcomment %}
+                                        <a class = "edit" href ="{% url 'profile_info' %}">Please Update Details</a></p>
+                                        <form class="form-sample"> 
+                                        {% include 'partials/_messages.html' %}
+                                        <div class="row">                  
+                                                {% comment %} <div class="card-body"> {% endcomment %}
+                                                                {% comment %} <div class="row"> {% endcomment %}
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3 col-form-label">Full Name</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" value="{{Full_Name}}" class="form-control" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3 col-form-label">Email</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" value="{{Email}}" class="form-control" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            {% for profile in profiles  %}
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3 col-form-label">Address</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" value="{{ profile.address }}" style = "width: 350px;" class="form-control" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3 col-form-label">Mobile Number</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" value="{{ profile.mobile_number }}" class="form-control" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3 col-form-label">Country</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" value="{{ profile.country }}" class="form-control" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3 col-form-label">State</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" value="{{ profile.state }}" class="form-control" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                <div class="card-body">
+                                                    <a href="{% url 'edit_profile' profile.id %}" class="button btn btn-primary">Edit Details</a>
+                                                </div>
+                                                        </form>
+                                                            
+                                                            {% endfor %}
+
+
+
+
+
+                                    {% comment %} <p class="card-title mb-0">Candidate Reports</p> {% endcomment %}
+                                    {% comment %} <div class="table-responsive">
+                                        <table class="table table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mobile Number</th>
+                                                    <th> <center> Address </center></th>
+                                                    <th>Country </th>
+                                                    <th>State of Origin</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                           
+                                                {% for profile in profiles %}
+                                                <tr>
+                                                    <td>{{profile.mobile_number}}</td>
+                                                    <td>{{profile.address}}</td>
+                                                    <td>{{profile.country}}</td>
+                                                    <td>{{profile.state}}</td>
+                                                    <td>
+                                                    <a href="{% url 'edit_profile' profile.id %}" class="btn btn-primary ">Edit Details</a>
+                                                    <a href="{% url 'edit_profile' profile.id %}" class="edit btn btn-primary "><i class="ti-pencil-alt"></i></a>
+                                                    <a href = "" class = " btn btn-primary"><i class="ti-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div> {% endcomment %}
+                        
+                    </div>
+                                                {% comment %} 
+                                                <form class="form-sample"><div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Mobile Number</label> 
+                                                    <div class="col-sm-9">
+                                                         <input type="text"  {{values.mobile_number }} class="form-control" readonly/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                           
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Address</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" {{values.address}} class="form-control" readonly/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group row">
+                                                   
+                                                    <label class="col-sm-3 col-form-label">Country</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" {{values.country}} class="form-control" readonly/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                             <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">State</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" {{values.state}} class="form-control" readonly/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                      
+                 
+                                            </form> {% endcomment %}
+                                    
+                                            
+
+
+                                                {% comment %} <div class="col-md-6">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                <a href = "{% url 'profile_info' %}"> 
+                                                    <button type="submit" class="edit btn btn-primary me-2">Add Details</button>
+                                               </a>                                           
+                                                </div> {% endcomment %}
+
+                            {% comment %}                                                     
+                                            <a href = "{% url 'profile_info' %}"> 
+                                    <button type="submit" class="edit btn btn-primary me-2">Update</button> {% endcomment %}
+                                    </a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+        </div>
+    </div>
+
+{% endblock %}

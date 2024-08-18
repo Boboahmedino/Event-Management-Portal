@@ -1,0 +1,56 @@
+{% extends 'base_dash.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid page-body-wrapper">
+{% include 'dashboard/sidebar.html' %}
+        <div class="main-panel">
+            <div class="content-wrapper">
+                       <div class="row">
+                        
+                        <div class="col-12 grid-margin">
+
+                            <div class="card">
+                                        {% include 'partials/_messages.html' %}
+
+                                <div class="card-body">
+                                 
+                            <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card border-bottom-0">
+                                <div class="card-body pb-0">
+                                    <center><img src="{%static "twitter/logo3.jpg" %}" width = '100' /></center>
+                                                <br>
+                                    <center><h3 class="text-muted font-weight-light">Welcome to the Lagos State Univeristy Event Services</h3></center>
+                                    <center> <p class="card-title">We Provide The Best Event Services In Your Budget</p></center>
+                                   
+                                   <center>
+                                    <h4 class="text-muted font-weight-light">
+                                        Event Services in Lagos State University oversees the operations of different
+                                        major events,including outdoor events on campus. </h4></center>
+                                        <center>
+                                        <h4 class="text-muted font-weight-light"> Event Services operations involves the responsibility of creating beautiful events, from concept to the
+                                        completion of  the event, Event Services will aid reservation, planning,
+                                        Event security and Production elements to make your event pleasurable as you imagined it. 
+                                    </h4>
+                                </center>                           
+                                </div>
+                                                <br>
+                                                <br>
+                                                <br>
+
+                                {% comment %} <canvas id="order-chart" class="w-100"></canvas> {% endcomment %}
+                            </div>
+                        </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+        </div>
+    </div>
+
+{% endblock %}

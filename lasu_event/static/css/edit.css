@@ -1,0 +1,22 @@
+.edit {
+    color: #000;
+    background-color: rgb(109, 148, 10);
+    border-color: green;
+}
+
+.edit:hover {
+    color: #000;
+    background-color: #0d8421;
+    border-color: #45fd64;
+}
+.delete {
+    color: #000;
+    background-color: rgb(245, 65, 65);
+    border-color: red;
+}
+
+.delete:hover {
+    color: #000;
+    background-color: rgb(147, 15, 15);
+    border-color: rgb(206, 52, 52);
+}

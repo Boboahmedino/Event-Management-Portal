@@ -1,0 +1,854 @@
+ {% extends 'base_home.html' %}
+ {% load static %}
+ {% block content %}
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="joo container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="">
+                                        <img src="{%static "twitter/logo1.png" %}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="">home</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a class="" href="#hall">Venues</a></li>
+                                            <li><a class="" href="#gallery">Gallery</a></li>
+
+                                            {% comment %} <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                        <li><a href="destination_details.html">Destinations details</a></li>
+                                                        <li><a href="elements.html">elements</a></li>
+                                                </ul>
+                                            </li> {% endcomment %}
+
+                                            {% comment %} <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">blog</a></li>
+                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                </ul>
+                                            </li> {% endcomment %}
+
+                                            {% comment %} <li><a href="#contact">Contact</a></li> {% endcomment %}
+                                            <li><a href="">Plan Event <i class="ti-angle-down"></i> </a>
+                                                 <ul class="submenu">
+                                                    <li><a href="{% url 'reservation' %}">Check Availabilty</a></li>
+                                                    <li><a href="{% url 'login' %}">Make Reservations</a></li>
+                                                </ul> 
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                                <div class="social_wrap d-flex align-items-center justify-content-end">
+                                    <div class="number">
+                                            <p><i class=" fa fa-envelope"></i> olaneye_ahmed_oladapo@180591038.com</p>
+                                            {% comment %} <p><i class=" fa fa-envelope"></i> mailsupport.lasuevents@gmail.com</p> {% endcomment %}
+                                        <!-- <p> <i class="fa fa-phone"></i> +234 9038 967 463</p> -->
+                                    </div>
+                                    <div class="social_links d-none d-xl-block">
+                                        <ul>
+                                            <!-- <p><i class=" fa fa-envelope"></i> mailsupport.lasuevents@gmail.com</p> -->
+                                            <!-- <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="seach_icon">
+                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div> -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-md-12">
+                            <div class="slider_text text-center">
+                                <!-- <h3>Makanjuola Hall</h3> -->
+                                <!-- <p>Pixel perfect design with awesome contents</p>
+                                <a href="#" class="boxed-btn3">Explore Now</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-md-12">
+                            <div class="slider_text text-center">
+                                <!-- <h3>Buba Maruwa Auditorium</h3> -->
+                                <!-- <p>Pixel perfect design with awesome contents</p>
+                                <a href="#" class="boxed-btn3">Explore Now</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_3 overlay">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-md-12">
+                            <div class="slider_text text-center">
+                                <!-- <h3>Switzerland</h3> -->
+                                <!-- <p>Pixel perfect design with awesome contents</p>
+                                <a href="#" class="boxed-btn3">Explore Now</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- where_togo_area_start  -->
+    <!-- <div class="where_togo_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="form_area">
+                        <h3>Where you want to go?</h3>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="search_wrap">
+                        <form class="search_form" action="#">
+                            <div class="input_field">
+                                <input type="text" placeholder="Where to go?">
+                            </div>
+                            <div class="input_field">
+                                <input id="datepicker" placeholder="Date">
+                            </div>
+                            <div class="input_field">
+                                <select>
+                                    <option data-display="Travel type">Travel type</option>
+                                    <option value="1">Some option</option>
+                                    <option value="2">Another option</option>
+                                </select>
+                            </div>
+                            <div class="search_btn">
+                                <button class="boxed-btn4 " type="submit" >Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- where_togo_area_end  -->
+    
+
+    <!-- About Start --> 
+    <div  id="about" class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="{%static "twitter/19.jpg" %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">LASU Event Services</h6>
+                        <h1 class="mb-3">We Provide The Best Event Services In Your Budget</h1>
+                        <p>
+                        Event Services in Lagos State University oversees the operations of different
+                        major events,including outdoor events on campus. Event Services operations
+                        involves the responsibility of creating beautiful events, from concept to the
+                        completion of  the event, Event Services will aid reservation, planning,
+                        Event security and Production elements to make your event pleasurable as you imagined it. 
+                        </p>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <img class="img-fluid" src="{%static "twitter/20.jpg" %}" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src="{%static "twitter/18.jpg" %}" alt="">
+                            </div>
+                              
+                        </div>
+                         {% comment %} <div>
+                            <a href="{%url 'reservation'%}" class="re btn btn-primary mt-1">Make Reservations</a>
+                         </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+
+    
+
+
+
+<!-- About End -->
+
+
+
+<!-- new event template -->
+<div id="hall">
+    <h3 class="no">Venues</h3>
+    <br>
+    <section data-history-node-id="606" about=""
+    class="node node--type-modular-page node--view-mode-full">
+    <div class="featured-media--large-image-wrapper background--">
+        <div class="large-image large-image--half large-image--left lazy"
+            style="background: url('twitter/4.jpg') center center / cover no-repeat;">
+            <img src="{%static "twitter/4.jpg" %}" alt="" width="1000" height="410px">
+
+        </div>
+        <div
+            class="lazy large-image-text large-image--half background-- d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row mt-2">
+                    <h2 class="col-sm-12 text-center">Aderemi Makanjuola Lecture Theatre</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 subtitle text-center">Aderemi Makanjuola Lecture Hall offers state-of-the-art conference and event
+                        spaces, extensive support for students and their leadership development, comfortable place to be, and service that will exceed your expectations.</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="more_place_btn text-center">
+                            <a class="boxed-btn4" href="{% url 'makanjuola' %}">View Makanjuola Hall</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="featured-media--large-image-wrapper background--">
+        <div class="large-image large-image--half large-image--right lazy"
+            style="background: url('twitter/1.jpg') center center / cover no-repeat;">
+            <img src="{%static "twitter/1.jpg" %}" alt="" width="1000" height="400px">
+        </div>
+        <div
+            class="lazy large-image-text large-image--half background-- d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row mt-2">
+                    <h2 class="col-sm-12 text-center">Buba Marwa Auditorium</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 subtitle text-center"> Located in Lagos State University at the center of Ojo
+                        (Buba Marwa commonly referred to as the Main Auditorium) which is capable of hosting wide variety of events.
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="more_place_btn text-center">
+                            <a class="boxed-btn4" href="{% url 'auditorium' %}">View Buba Auditorium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="featured-media--large-image-wrapper background--">
+        <div class="large-image large-image--half large-image--left lazy"
+            style="background: url('/student-affairs/sites/ohio.edu.student-affairs/files/2018-06/feature_galbreath.jpg') center center / cover no-repeat;">
+            <img src="{%static "twitter/40.webp" %}" alt="" width="1000" height="410px">
+        </div>
+        <div
+            class="lazy large-image-text large-image--half background-- d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row mt-2">
+                    <h2 class="col-sm-12 text-center">Chapel of Light</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 subtitle text-center"> The Chapel of Light welcomes people of all faiths. There is no permanent furnishing that would be
+                        identified with one religion or denomination and there are no restrictions on the type of
+                        service that may be conducted.</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="more_place_btn text-center">
+                            <a class="boxed-btn4" href="#">View Chapel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="featured-media--large-image-wrapper background--">
+        <div class="large-image large-image--half large-image--right lazy"
+            style="background: url('/student-affairs/sites/ohio.edu.student-affairs/files/2018-06/feature_memaud.jpg') center center / cover no-repeat;">
+            <img src="{%static "twitter/27.jpg" %}" alt="" width="1000" height="410px">
+        </div>
+        <div
+            class="lazy large-image-text large-image--half background-- d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row mt-2">
+                    <h2 class="col-sm-12 text-center">Students Arcade</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 subtitle text-center">The Arcade consists of a very large hall, two conference rooms, governance meeting area, catering kitchen, and
+                    various service and support areas.</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="more_place_btn text-center">
+                            <a class="boxed-btn4" href="#">View Arcade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="featured-media--large-image-wrapper background--">
+        <div class="large-image large-image--half large-image--left lazy"
+            style="background: url('/student-affairs/sites/ohio.edu.student-affairs/files/2018-06/feature_outdoor.jpg') center center / cover no-repeat;">
+            <img src="{%static "twitter/61.webp" %}" alt="" width="1000" height="410px">
+        </div>
+        <div
+            class="lazy large-image-text large-image--half background-- d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row mt-2">
+                    <h2 class="col-sm-12 text-center">LASU Sport Center </h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 subtitle text-center">Explore Outdoor Spaces of Lagos State University Event Services has to offer.</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="more_place_btn text-center">
+                            <a class="boxed-btn4" href="#">View Sport Center</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    </div>
+    </section>
+</div>
+<!-- end -->
+
+
+    <!-- popular_destination_area_start  -->
+    <!-- popular_destination_area_end  -->
+
+
+    <div id="gallery" class="popular_places_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div id="gallery" class="section_title text-center mb_70">
+                       <h3>Gallery</h3>
+                        <!-- <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/39.webp" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/46.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_place">
+                            <div class="thumb">
+                                <img src="{%static "twitter/56.jpeg" %}" alt="">
+                                <!-- <a href="#" class="prise">$500</a> -->
+                            </div>
+                            
+                        </div>
+                    </div>  
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/12.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/13.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/24.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/6.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/14.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <img src="{%static "twitter/23.jpg" %}" alt="">
+                            <!-- <a href="#" class="prise">$500</a> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="more_place_btn text-center">
+                        <a class="boxed-btn4" href="#">Explore our Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+    <!-- <div class="travel_variation_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_travel text-center">
+                        <div class="icon">
+                            <img  alt="">
+                        </div>
+                        <h3></h3>
+                        <p>                
+                        </p>
+                    </div>
+                </div>
+             <div class="col-lg-4 col-md-6"> 
+                    <div class="single_travel text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/1.svg" alt="">
+                        </div>
+                        <h3>Comfortable Journey</h3>
+                        <p>Located at the center of Ojo, Lagos State Nigeria. This makes it easily acessible to people which is linked by good roads and
+                        adequate security to make your journey to the University community a comfortable one.</p>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_travel text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/3.svg" alt="">
+                        </div>
+                        <h3>Travel Guide</h3>
+                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!-- Up coming events -->
+<div class="content-wrapper">
+ 
+    <div class="tabs_component ">
+        <div class="tabs_container" data-section-tabs="container"
+            data-section-tabs-selector="#tabs-32573204203529-panels .tabs-component-panel">
+
+
+<div id="recent" class="recent_trip_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Events</h3>
+                    </div>
+                <div class="tabs" role="tablist">
+                    <a href="" id="tabs-32573204203529-32573204212161-tab"
+                        class="tab selected_tab_colorfive" data-title="Trending Events" role="tab" aria-selected="true"
+                        aria-controls="tabs-32573204203529-32573204212161">
+                        Trending
+                    </a>
+                    <a href="" id="tabs-32573204203529-32573204233965-tab" class="tab"
+                        data-title="Upcoming Events" role="tab" aria-selected="false"
+                        aria-controls="tabs-32573204203529-32573204233965">
+                        Upcoming
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_trip">
+                    <div class="thumb">
+                        <img src="{%static "twitter/29.jpg" %}" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="date">
+                            <span>Jan 05, 2023</span>
+                            <span>Buba Marwa Auditorium, Main Campus, Ojo.</span>
+
+                        </div>
+                        <br>
+                       <h3>  <a class = "event_link" href = "#" > 2022/2023 Matriculation Ceremony </a> </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_trip">
+                    <div class="thumb">
+                        <img src="{%static "twitter/17.jpg" %}" height="270" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="date">
+                            <span>Nov 18, 2022</span>
+                            <span>Buba Marwa Auditorium, Main Campus, Ojo.</span>
+                        </div>
+                        <p>
+                        <a class = "event_link" href = "#">
+                        <h3>2021/2022 Orientation Programme for Newly Admitted Students</h3>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_trip">
+                    <div class="thumb">
+                        <img src="{%static "twitter/7.jpg" %}" height="270" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="date">
+                            <span>Aug 09, 2022</span>
+                            <span>Aderemi Makanjuola Lecture Theatre, Lagos State University</span>
+
+                        </div>
+                        <p>
+                            <a class = "event_link" href = "#">
+                        <h3>National Workshop on Awareness for the Implementation of Small Scale
+                            Fisheries Guidlines in Nigeria</h3>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_trip">
+                    <div class="thumb">
+                        <img src="{%static "twitter/s3.png" %}" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="date">
+                            <span>Jun 16, 2022</span>
+                            <span>Lagos State University, Main Campus, Ojo.</span>
+
+                        </div>
+                        <p>
+                        
+                        <h3> <a class = "event_link"  href = "#"> Professional Certificate in Digital Forensic and Cyber Investigation
+                        </a>
+                        </h3>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_trip">
+                    <div class="thumb">
+                        <img src="{%static "twitter/s4.png" %}" height="270" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="date">
+                            <span>Nov 26, 2021</span>
+                            <span>Hall 003,Directorate of ICT, LASU Ojo Campus, Lagos.</span>
+                        </div>
+                        <p>
+                        <h3> <a class = "event_link" href = "#"> LASU CISCO ACADEMY: CISCO CERTIFICATION TRAINING PROGRAMME
+                                </a>
+                        </h3>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_trip">
+                    <div class="thumb">
+                        <img src="{%static "twitter/s2.png" %}" height="270" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="date">
+                            <span>May 31, 2021</span>
+                            <span>Zenith ICT Centre, Lagos State University, Ojo</span>
+
+                        </div>
+                        <p>
+                        <h3> <a class = "event_link" href = "#"> Microsoft Office 365 Training </a>
+                        </h3>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="more_place_btn text-center">
+                    <a class="boxed-btn4" href="#">Show all Events</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end coming events -->
+
+<!-- recent events -->
+  
+<!-- <div class="destination_details_info">
+    <div class="container">
+        <div class="row justify-content-center">
+
+                    <div class="bordered_1px"></div>
+                    <div class="contact_join">
+                        <h3>Contact for join</h3>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single_input">
+                                        <input type="text" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single_input">
+                                        <input type="text" placeholder="Phone no.">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_input">
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="submit_btn">
+                                        <button class="boxed-btn4" type="submit">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+ -->
+
+<!-- Contact Start -->
+<!-- <div class="container-fluid py-5">
+    <div class="container py-5">
+        <div  class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Comment</h6>
+            <h1></h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form bg-white" style="padding: 30px;">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                    required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                    required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                            <div class="control-group">
+                            <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                required="required"
+                                data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Contact End -->
+
+
+<!-- end Feedback -->
+
+
+<!-- Footer Start -->
+<div class="back">
+        <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <div class="footer_logo">
+                        <a href="#">
+                            <img src="{%static "twitter/logo2.png" %}" alt="">
+                        </a>
+                    </div>
+                    <!-- <a href="" class="navbar-brand">
+                        <h3 class="text-primary"><span class="foot">
+                            LASU Events</h3>
+                    </a> -->
+                    <p>Event Services in Lagos State University oversees the operations of different
+                    major events,including outdoor events on campus. Event Services operations
+                    involves the responsibility of creating beautiful events, from concept to the
+                    completion of the event, Event Services will aid reservation, planning,
+                    Event security and Production elements to make your event pleasurable as you imagined it.</p>
+                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                    <div class="d-flex justify-content-start">
+                        <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="ti-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="ti-facebook"></i></a>
+                        <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" ><i class="fa fa-angle-right mr-2"></i>Exhibiiton</a>
+                        <a class="text-white-50 mb-2" ><i class="fa fa-angle-right mr-2"></i>Fundraisers</a>
+                        <a class="text-white-50 mb-2" ><i class="fa fa-angle-right mr-2"></i>Meetings & Conferences</a>
+                        <a class="text-white-50 mb-2" ><i class="fa fa-angle-right mr-2"></i>Lectures & Presentations</a>
+                        <a class="text-white-50 mb-2" ><i class="fa fa-angle-right mr-2"></i>Networking & Social Events</a>
+                        <a class="text-white-50 mb-2" ><i class="fa fa-angle-right mr-2"></i>Sporting Events</a>
+                        <a class="text-white-50" ><i class="fa fa-angle-right mr-2"></i>Concert & Performances</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Activity</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white-50 mb-2" href="#gallery"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                        <a class="text-white-50 mb-2" href="#recent"><i class="fa fa-angle-right mr-2"></i>Recent Events</a>
+                        <a class="text-white-50 mb-2" href="#hall"><i class="fa fa-angle-right mr-2"></i>Venues</a>
+                        <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Privacy and Policy</a>
+
+                    </div>
+                </div>
+                <div id="contact" class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+                    <p><i class="ti-home"></i> Lagos State University Ojo (Main Campus) Lagos State, Nigeria.</p>
+                    <p><i class="fa fa-phone"></i> +234 9038 967 463</p>
+                    <p><i class="fa fa-envelope"></i> olaneye_ahmed@180591038.com</p>
+                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 3px;">Newsletter</h6>
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="email" class="form-control border-light" style="padding: 25px; border-color: #2ecc71;"
+                                placeholder="Your Email">
+                            <div class="input-group-append">
+                            <!-- <button class="sub btn btn-primary px-3"> -->
+                                <a class="joo sub btn btn-primary px-3" href="mailto:rahkellen@gmail.com">Subscribe</a>
+                                <!-- </button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+            style="border-color: rgba(256, 256, 256, .1) !important;">
+            
+            <div class="row">
+                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                    
+                  
+                        <p class="m-0 text-white-50"> &copy; 
+                        <script>document.write(new Date().getFullYear());</script>
+                        <a>Lagos State University Event Services</a> 
+                    </p>
+                    
+                </div>
+                
+                <!-- <div class="col-lg-6 text-center text-md-right">
+                    <p class="m-0 text-white-50">Designed by Olaneye Ahmed</p>
+                </div> -->
+            </div>
+        </div>
+</div>
+<!-- Footer End -->
+  {% endblock %}
