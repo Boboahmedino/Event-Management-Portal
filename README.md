@@ -1,9 +1,9 @@
-### **Event Management Portal**
+### Event Management Portal
 
-#### **Overview**  
+#### Overview  
 This web-based Event Management Portal, built with HTML, CSS, JavaScript, and Django, provides an efficient solution for organizing and managing events at Lagos State University. It allows users both within and outside the university community to view, register for events, and book halls for events, all through an intuitive interface. Admins have the ability to manage events, track reservations, and handle event-related logistics seamlessly.
 
-#### **Features**
+#### Features
 
 - **User Authentication:** Secure user authentication allows individuals to create accounts, log in, and safely manage their event registrations and hall bookings.
 - **Event Management:** Admins can add, update, or remove events, providing key details such as dates, times, locations, and descriptions to keep the community informed.
@@ -32,3 +32,8 @@ This command will automatically install all the necessary libraries, including D
 - **Customizability:** This platform is highly customizable and can be extended with additional features like event notifications, multi-user roles (admin, participant, guest), user feedback systems, and more.
 
 - **Environment Setup:** It is recommended to use a virtual environment to manage your dependencies and ensure a clean project setup. This helps isolate the project’s libraries and avoid conflicts with other Python projects.
+
+---
+
+## Author
+Olaneye Ahmed Oladapo
