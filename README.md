@@ -1,7 +1,3 @@
-Below is the updated README with clickable GitHub and LinkedIn links added to the Author section:
-
----
-
 # 🎉 **Event Management Portal**  
 > *A digital gateway to effortlessly organize, manage, and experience events at Lagos State University—where tradition meets innovation.*
 
