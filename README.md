@@ -171,7 +171,7 @@ LASU-Event-Management/
 
 ## 👤 **Author**  
 **Olaneye Ahmed Oladapo**  
-[GitHub](https://github.com/boboahmedino)  [LinkedIn](https://www.linkedin.com/in/olaneye/)
-
+🔗 GitHub: [Boboahmedino](https://github.com/boboahmedino)  
+🔗 LinkedIn: [Olaneye Ahmed Oladapo](https://www.linkedin.com/in/olaneye/) 
 ---
 
