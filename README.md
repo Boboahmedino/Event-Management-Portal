@@ -171,13 +171,7 @@ LASU-Event-Management/
 
 ## 👤 **Author**  
 **Olaneye Ahmed Oladapo**  
-[![GitHub Badge](https://img.shields.io/badge/GitHub-boboahmedino-grey?logo=github&style=flat-square)](https://github.com/boboahmedino)  
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Olaneye%20Ahmed%20Oladapo-blue?logo=linkedin&style=flat-square)](https://www.linkedin.com/in/olaneye/)
+[GitHub](https://github.com/boboahmedino)  [LinkedIn](https://www.linkedin.com/in/olaneye/)
 
 ---
 
-> **Embrace the magic of organized events** with the **Event Management Portal**—where every detail is managed with precision, and every event is a masterpiece waiting to happen. Enjoy crafting memorable experiences at **Lagos State University**!
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Happy%20Eventing!-BrightGreen?style=for-the-badge" alt="Happy Eventing!" />
-</div>
